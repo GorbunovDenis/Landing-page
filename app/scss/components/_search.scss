@@ -1,0 +1,45 @@
+.search {
+  &__tabs {
+    margin-bottom: 25px;
+  }
+  &__item {
+    padding: 11px 26px 12px;
+  }
+  &__item.tab--active {
+    background-color: #f0f0f4;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #2f3035;
+    @extend %SFProDisplay-Bold;
+    border-radius: 5px;
+  }
+
+  &__content-btn {
+    @extend %btn;
+    margin-left: -3px;
+  }
+  &__content-input {
+    width: 100%;
+    background-color: #f0f0f4;
+    border-radius: 3px;
+    padding: 15px 20px;
+    border: none;
+    font-size: 16px;
+    line-height: 19px;
+    &::placeholder {
+      color: #656464;
+    }
+  }
+  &__content-form {
+    display: flex;
+  }
+}
+
+.tabs-content {
+  display: none;
+}
+
+.tabs-content.tabs-content--active {
+  display: block;
+}

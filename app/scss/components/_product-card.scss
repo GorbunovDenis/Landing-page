@@ -1,0 +1,139 @@
+.product-card {
+  margin-bottom: 80px;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__img-box {
+    position: relative;
+    padding-top: 64px;
+    width: 500px;
+    min-height: 579px;
+    text-align: center;
+    &::before {
+      content: 'SALE';
+      background-color: #1c62cd;
+      border-radius: 3px;
+      padding: 13px 26px;
+      font-size: 15px;
+      line-height: 18px;
+      letter-spacing: 0.12em;
+    }
+  }
+  &__img {
+    width: 500px;
+    height: 375px;
+    object-fit: contain;
+  }
+  &__price-old {
+    position: relative;
+    font-size: 30px;
+    line-height: 36px;
+    color: #000000;
+    @extend %barlow-Regular;
+    opacity: 0.6;
+    margin-bottom: 6px;
+    &::before {
+      content: '';
+      position: absolute;
+      background-image: url('../images/icons/old-line.svg');
+      background-repeat: no-repeat;
+      width: 132px;
+      height: 21px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  &__price-new {
+    @extend %barlow-Bold;
+    font-size: 40px;
+    line-height: 48px;
+    margin-bottom: 17px;
+  }
+  &__link {
+    font-size: 15px;
+    line-height: 18px;
+    color: #1c62cd;
+  }
+  &__content {
+    width: 570px;
+  }
+  &__title {
+    font-size: 30px;
+    line-height: 36px;
+    margin-bottom: 10px;
+    @extend %SFProDisplay-Bold;
+  }
+  &__code {
+    font-size: 15px;
+    line-height: 18px;
+    opacity: 0.6;
+    margin-bottom: 22px;
+  }
+  &__buttons {
+    margin-bottom: 50px;
+  }
+  &__tab {
+    font-size: 20px;
+    line-height: 24px;
+    opacity: 0.6;
+    padding-bottom: 5px;
+    padding-right: 17px;
+    margin-bottom: 5px;
+  }
+  &__tab + .product-card__tab {
+    padding-left: 17px;
+  }
+  .product-card__tab.tab--active {
+    opacity: 1;
+    border-bottom: 2px solid #1c62cd;
+    @extend %SFProDisplay-Bold;
+  }
+  &__item {
+    padding: 15px 0 6px;
+    border-bottom: 1px solid rgba(47, 48, 53, 0.1);
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item-left {
+    padding-right: 15px;
+  }
+  &__item-right {
+    width: 125px;
+  }
+  &__list {
+    margin-bottom: 20px;
+  }
+  &__more {
+    font-size: 14px;
+    line-height: 17px;
+    border-bottom: 1px solid #1c62cd;
+    color: #1c62cd;
+    margin-bottom: 45px;
+  }
+  &__btn button {
+    background: #1c62cd;
+    border-radius: 3px;
+    text-align: center;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #ffffff;
+    border: none;
+    padding: 17px 53px;
+    cursor: pointer;
+  }
+  &__buttons a + a {
+    margin-left: 30px;
+  }
+  &__btn-mobile {
+    display: none;
+  }
+}
+
+// .tabs-content {
+//   display: none;
+// }
+
+// .tabs-content.tabs-content--active {
+//   display: block;
+// }

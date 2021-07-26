@@ -1,0 +1,189 @@
+.products {
+  margin-bottom: 80px;
+  &__title {
+    font-size: 25px;
+    line-height: 30px;
+    @extend %barlow-Bold;
+    color: $default;
+    margin-bottom: 25px;
+  }
+  &__tab + .products__tab {
+    margin-left: 50px;
+  }
+  &__tabs {
+    margin-bottom: 25px;
+  }
+  &__tab {
+    padding-bottom: 10px;
+  }
+  &__tab.tab--active {
+    border-bottom: 2px solid #1c62cd;
+  }
+  &__more {
+    text-align: center;
+    margin: 35px 0 0;
+  }
+  &__more-link {
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: $default;
+    background-color: #f0f0f4;
+    padding: 17px 43px;
+  }
+}
+
+.product-item {
+  width: 100%;
+  border: 1px solid #e0e0e0;
+  border-radius: 3px;
+  text-align: center;
+  padding: 52px 20px 31px;
+  transition: opacity 0.5s;
+  min-height: 400px;
+  &:hover {
+    box-shadow: 3px 3px 20px rgba(50, 50, 50, 0.25);
+    color: #1c62cd;
+    border: none;
+  }
+
+  &__wrapper {
+    position: relative;
+    width: 271px;
+    transition: all 0.3s;
+  }
+
+  &__wrapper.product-item__wrapper--list {
+    width: 100%;
+  }
+  &__title {
+    padding: 14px 0 7px;
+    @extend %SFProDisplay-Regular;
+  }
+  &__favorite {
+    position: absolute;
+    top: 16px;
+    right: 19px;
+    width: 24px;
+    height: 22px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 22px;
+      height: 22px;
+      background-image: url('../images/icons/heart.svg');
+      // background-repeat: no-repeat;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  &__favorite--active {
+    background-image: url('../images/icons/heart-active.svg');
+    // background-repeat: no-repeat;
+    width: 22px;
+    height: 22px;
+  }
+  &__price {
+    font-size: 30px;
+    line-height: 36px;
+    @extend %SFProDisplay-Bold;
+  }
+  // &__img {
+  //   margin: 0 auto;
+  // }
+  &__basket {
+    position: absolute;
+    width: 60px;
+    height: 40px;
+    background-color: #1c62cd;
+    border-radius: 10px 0px 0px 0px;
+    right: 0;
+    bottom: 0;
+    border: none;
+    cursor: pointer;
+    padding-left: 15px;
+  }
+  &__hover-text {
+    padding: 18px 21px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    position: absolute;
+    top: 30%;
+    opacity: 0;
+    transition: opacity 0.5s;
+    display: inline-block;
+  }
+  &__img {
+    display: inline-block;
+  }
+  &:hover .product-item__hover-text {
+    opacity: 1;
+    color: $default;
+  }
+  &:hover.product-item__notify-text {
+    color: $default;
+  }
+  &--sale::before {
+    content: 'sale';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #1c62cd;
+    color: #ffffff;
+    padding: 8px 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+  }
+  &__wrapper.product-item__not-available .product-item__price {
+    display: none;
+  }
+  &__notify-text {
+    display: none;
+    font-size: 18px;
+    line-height: 21px;
+    @extend %SFProDisplay-Bold;
+  }
+  &__wrapper.product-item__not-available .product-item__notify-text {
+    display: block;
+  }
+  &__wrapper.product-item__not-available .product-item__basket {
+    display: none;
+  }
+  &__notify-link {
+    display: none;
+  }
+  &__product-item__wrapper.product-item__not-available .product-item__title {
+    padding-bottom: 13px;
+  }
+  &__wrapper.product-item__not-available .product-item__notify-link {
+    display: inline-block;
+    position: absolute;
+    bottom: 20px;
+    font-size: 16px;
+    line-height: 19px;
+    color: #1c62cd;
+    text-align: center;
+    left: 0;
+    right: 0;
+  }
+  &__wrapper.product-item__not-available .product-item__notify-link span {
+    border-bottom: 1px solid #1c62cd;
+  }
+}
+
+.product-slider .slick-dots {
+  bottom: -30px;
+}
+.product-slider .slick-dots button {
+  background-color: #c4c4c4;
+}
+.product-slider .slick-dots .slick-active button {
+  background-color: #1c62cd;
+}

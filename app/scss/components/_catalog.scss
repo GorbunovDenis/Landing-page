@@ -1,0 +1,108 @@
+.catalog {
+  margin-bottom: 100px;
+  &__title {
+    font-size: 30px;
+    line-height: 36px;
+    color: $default;
+    @extend %SFProDisplay-Bold;
+    margin-bottom: 26px;
+  }
+  &__filter {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
+  &__items button {
+    background-color: #f0f0f4;
+    border-radius: 3px;
+    border: none;
+    padding: 4px 23px;
+    cursor: pointer;
+    color: #919298;
+  }
+  &__items button + button {
+    margin-left: 8px;
+  }
+  &__btn button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+  }
+  &__btn button + button {
+    margin-left: 10px;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+  }
+  &__btn-grid {
+    width: 23px;
+    height: 21px;
+  }
+  &__btn-line {
+    width: 25px;
+    height: 19px;
+  }
+
+  &__button {
+    opacity: 0.3;
+  }
+  &__button--active {
+    opacity: 1;
+  }
+  &__inner {
+    display: flex;
+  }
+  &__aside {
+    min-width: 290px;
+    margin-right: 10px;
+  }
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__list .product-item__wrapper {
+    margin-bottom: 30px;
+  }
+}
+
+.select-item {
+  border: 1px solid #d7d7d7;
+  font-size: 14px;
+  line-height: 17px;
+  margin-right: 34px;
+  // height: 33px;
+  padding: 0 46px 0 20px;
+}
+
+.pagination {
+  width: 100%;
+  margin-top: 70px;
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__item {
+    font-size: 18px;
+    line-height: 22px;
+    color: #c4c4c4;
+    margin: 0 11px;
+    @extend %barlow-Regular;
+    border: 2px solid transparent;
+  }
+  .pagination__item--active {
+    border: 2px solid #1c62cd;
+    padding: 8px 15px;
+    cursor: pointer;
+    color: #1c62cd;
+    @extend %barlow-Bold;
+  }
+}
+.aside__btn {
+  display: none;
+}

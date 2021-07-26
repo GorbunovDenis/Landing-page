@@ -1,0 +1,19 @@
+.breadcrumbs {
+  margin-bottom: 40px;
+  &__item {
+    display: inline-block;
+    margin-right: 10px;
+    padding-right: 16px;
+    position: relative;
+    &:not(:last-child):after {
+      content: url('../images/icons/angle.svg');
+      position: absolute;
+      right: 0;
+    }
+  }
+  &__link {
+    font-size: 15px;
+    line-height: 18px;
+    color: #c4c4c4;
+  }
+}
